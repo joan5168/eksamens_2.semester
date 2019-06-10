@@ -223,33 +223,36 @@ header {
 }
 
 .video_div {
-    /*position: absolute;*/
     position: relative;
     display: flex;
     align-items: center;
     bottom: 5vh;
-    height: 60vh;
-    width: 100vw;
+    /*    height: 100vh;*/
+    width: 100%;
     overflow: hidden;
+    height: auto;
 }
 
-.myVideo {
+#mobile_video {
     width: 100vw;
-    overflow: hidden;
+    min-height: 200vh;
 }
+
 
 #desktop_video {
     display: none;
 }
 
 /*Logo i toppen af mobil-versionen*/
-.mobile_logo {
-    margin: 100px 0;
-    width: 60%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+#mobile_logo img {
+    width: 90%;
+    margin: 12vw;
+    /*    centrering af billede*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 /*Styling for begge arrows i headeren - den blå til mobile og hvid til desktop*/
 .header_arrow {
@@ -830,169 +833,193 @@ footer {
     }
 }
 
-@media screen and (min-width: 767px) {
-    .desktop_gallery {
-        display: grid;
+/*splash video*/
+@media screen and (min-width: 578px) {
+
+    .video_div {
+        bottom: 0.1vh;
     }
 
-    .slideshow-container {
-        display: none;
-    }
 
-    :root {
-        --main-padding: 80px;
-    }
-
-    .team_member {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .team_member .text_content {
-        border: none;
-        margin: 0 20px;
-        padding: 0;
-        flex: 1.5;
-    }
-
-    div:nth-of-type(odd).team_member {
-        flex-direction: row-reverse;
-    }
-
-    nav {
-        width: 50vw;
-        padding: 0 25vw;
-    }
-
-    #bottom_gallery {
-        grid-gap: 50px;
-        padding: 100px;
-    }
-
-}
-
-@media screen and (min-width: 1023px) {
-    #desktop_video {
-        display: block;
-    }
-
-    #mobile_video {
-        display: none;
-    }
-
-    #bottom_gallery {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    :root {
-        --main-padding: 50px;
-    }
-
-    .content {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    section {
-        padding: 0;
-    }
-
-    section:nth-of-type(odd) .content {
-        flex-direction: row-reverse;
-    }
-
-    section .image_content {
-        margin-top: 18px;
-    }
-
-    section:nth-of-type(odd) .content .image_content {
-        margin-left: 40px;
-    }
-
-    section:nth-of-type(even) .content .image_content {
-        margin-right: 40px;
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 20px;
-
-    }
-
-    .team_member {
-        margin-bottom: 0;
-    }
-
-    #vores_team .image_content {
-        margin: 0;
-    }
-
-    .bog.sub_section {
-        margin: 0;
-    }
-
-    .grid-3 {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 10px;
-    }
-
-    #kurser .text_content {
-        border: none;
-        padding-bottom: 0;
-    }
-
-    #kurser h2 {
-        margin-top: 40px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .header_arrow_blue {
-        display: none;
+    /*Logo i toppen af mobil-versionen*/
+    #mobile_logo img {
+        width: 90%;
+        margin-top: 12vw;
+        margin-bottom: 5vh;
     }
 
     .header_arrow {
+        /*position: absolute;*/
+        /*top: 95vh;*/
+        top: 95vh;
         position: absolute;
-        left: 50vw;
-        bottom: 0;
-
-        padding-left: 100px;
     }
 
-    .header_arrow_white {
-        display: block;
-        z-index: 200;
+
+    @media screen and (min-width: 767px) {
+        .desktop_gallery {
+            display: grid;
+        }
+
+        .slideshow-container {
+            display: none;
+        }
+
+        :root {
+            --main-padding: 80px;
+        }
+
+        .team_member {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .team_member .text_content {
+            border: none;
+            margin: 0 20px;
+            padding: 0;
+            flex: 1.5;
+        }
+
+        div:nth-of-type(odd).team_member {
+            flex-direction: row-reverse;
+        }
+
+        nav {
+            width: 50vw;
+            padding: 0 25vw;
+        }
+
+        #bottom_gallery {
+            grid-gap: 50px;
+            padding: 100px;
+        }
 
     }
 
-    .mobile_logo {
-        display: none;
+    @media screen and (min-width: 1023px) {
+        #desktop_video {
+            display: block;
+        }
+
+        #mobile_video {
+            display: none;
+        }
+
+        #bottom_gallery {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        :root {
+            --main-padding: 50px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        section {
+            padding: 0;
+        }
+
+        section:nth-of-type(odd) .content {
+            flex-direction: row-reverse;
+        }
+
+        section .image_content {
+            margin-top: 18px;
+        }
+
+        section:nth-of-type(odd) .content .image_content {
+            margin-left: 40px;
+        }
+
+        section:nth-of-type(even) .content .image_content {
+            margin-right: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+
+        }
+
+        .team_member {
+            margin-bottom: 0;
+        }
+
+        #vores_team .image_content {
+            margin: 0;
+        }
+
+        .bog.sub_section {
+            margin: 0;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        #kurser .text_content {
+            border: none;
+            padding-bottom: 0;
+        }
+
+        #kurser h2 {
+            margin-top: 40px;
+        }
     }
 
-    .burger_menu {
-        display: none;
-    }
+    @media screen and (min-width: 1200px) {
+        .header_arrow_blue {
+            display: none;
+        }
 
-    nav {
-        width: 225px;
-        padding: 0 20px;
-        /*position: sticky;*/
-        top: 0;
-    }
+        .header_arrow {
+            position: absolute;
+            left: 50vw;
+            bottom: 0;
 
-    nav ul {
-        padding: 5vh 20px 20vh 0;
-    }
+            padding-left: 100px;
+        }
 
-    .menu_logo {
-        margin-top: 7vw;
-        width: 100%;
-    }
+        .header_arrow_white {
+            display: block;
+            z-index: 200;
 
+        }
+
+        #mobile_logo {
+            display: none;
+        }
+
+        .burger_menu {
+            display: none;
+        }
+
+        nav {
+            width: 225px;
+            padding: 0 20px;
+            /*position: sticky;*/
+            top: 0;
+        }
+
+        nav ul {
+            padding: 5vh 20px 20vh 0;
+        }
+
+        .menu_logo {
+            margin-top: 7vw;
+            width: 100%;
+        }
+
+        /*
     .video_div {
         position: absolute;
         bottom: 0;
@@ -1001,52 +1028,53 @@ footer {
         min-height: 100vh;
         overflow: hidden;
     }
+*/
 
-    .myVideo {
-        position: absolute;
-        min-width: 100vw;
-        min-height: 100vh;
-        overflow: hidden;
-        object-fit: cover;
+        .myVideo {
+            position: absolute;
+            min-width: 100vw;
+            min-height: 100vh;
+            overflow: hidden;
+            object-fit: cover;
+        }
+
+        .hide_overflow {
+            overflow: auto;
+        }
+
+        .mobile_hidden {
+            display: flex;
+        }
+
+        main {
+            padding-left: 300px;
+            padding-right: 50px;
+            margin: 5vh auto 0 auto;
+        }
+
+        footer {
+            padding-left: 300px;
+            /*padding-right: 50px;*/
+        }
+
+        .grid-3 {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        h1 {
+            margin: 2vh var(--main-padding) 0 var(--main-padding);
+        }
+
+
     }
 
-    .hide_overflow {
-        overflow: auto;
+    @media screen and (min-width: 1400px) {
+        .grid-3 {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .map .mapbox {
+            margin-top: 90px;
+        }
+
     }
-
-    .mobile_hidden {
-        display: flex;
-    }
-
-    main {
-        padding-left: 300px;
-        padding-right: 50px;
-        margin: 5vh auto 0 auto;
-    }
-
-    footer {
-        padding-left: 300px;
-        /*padding-right: 50px;*/
-    }
-
-    .grid-3 {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    h1 {
-        margin: 2vh var(--main-padding) 0 var(--main-padding);
-    }
-
-
-}
-
-@media screen and (min-width: 1400px) {
-    .grid-3 {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .map .mapbox {
-        margin-top: 90px;
-    }
-
-}
