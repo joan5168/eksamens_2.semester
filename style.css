@@ -675,15 +675,6 @@ stylet anderledes.*/
     margin-top: 4px;
 }
 
-.nemliglogo {
-    background-image: url(elements/nemliglogo.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 30px;
-    width: 100px;
-    position: absolute;
-    z-index: 20;
-}
 
 /*------LARSJON------*/
 .larsjon {
@@ -696,15 +687,6 @@ stylet anderledes.*/
     background-color: #455e84;
 }
 
-.larsjonlogo {
-    background-image: url(elements/larsjonlogo.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    margin-top: 20px;
-    height: 50px;
-    width: 100px;
-    position: absolute;
-}
 
 /*------BUTIKKEN------*/
 .butikken {
